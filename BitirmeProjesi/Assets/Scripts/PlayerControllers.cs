@@ -8,6 +8,7 @@ public class PlayerControllers : MonoBehaviour
     [SerializeField] float speed;
     private Rigidbody2D myBody;
     private Vector3 defaultLocalScale;
+    public bool onGround;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,15 +21,21 @@ public class PlayerControllers : MonoBehaviour
     {
         //Debug.Log(Input.GetAxis("Horizontal"));
         mySpeedX = Input.GetAxis("Horizontal");
-       myBody.velocity = new Vector2(mySpeedX  * speed, myBody.velocity.y);
+        myBody.velocity = new Vector2(mySpeedX * speed, myBody.velocity.y);
 
-        if (mySpeedX>0)
+        if (mySpeedX > 0)
         {
             transform.localScale = new Vector3(defaultLocalScale.x, defaultLocalScale.y, defaultLocalScale.z);
         }
-        else if (mySpeedX<0)
+        else if (mySpeedX < 0)
         {
             transform.localScale = new Vector3(-defaultLocalScale.x, defaultLocalScale.y, defaultLocalScale.z);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("Boşluk tuşuna basıldı.");
+            myBody.velocity = new Vector2(myBody.velocity.x, 5f);
         }
     }
 }
