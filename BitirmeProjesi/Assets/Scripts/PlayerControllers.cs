@@ -6,9 +6,11 @@ public class PlayerControllers : MonoBehaviour
 {
     private float mySpeedX;
     [SerializeField] float speed;
+    [SerializeField] float jumpPower;
     private Rigidbody2D myBody;
     private Vector3 defaultLocalScale;
     public bool onGround;
+    private bool canDoubleJump;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,8 +36,21 @@ public class PlayerControllers : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log("Boşluk tuşuna basıldı.");
-            myBody.velocity = new Vector2(myBody.velocity.x, 5f);
+            // Debug.Log("Boşluk tuşuna basıldı.");
+            if (onGround==true)
+            {
+                myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
+                canDoubleJump = true;
+            }
+            else
+            {
+                if (canDoubleJump==true)
+                {
+                    myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
+                    canDoubleJump = false;
+                }
+            }
+            
         }
     }
 }

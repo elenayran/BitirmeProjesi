@@ -8,11 +8,13 @@ public class TriggerControl : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger girdi");
+        //Debug.Log("Trigger gerçekleşti.");
+        player.GetComponent<PlayerControllers>().onGround = true;
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Trigger çıktı");
+        player.GetComponent<PlayerControllers>().onGround = false;
+        //Debug.Log("Triggerdan çıktı");
     }
 }
