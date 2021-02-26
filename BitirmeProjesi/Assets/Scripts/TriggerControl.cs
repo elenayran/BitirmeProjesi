@@ -10,8 +10,9 @@ public class TriggerControl : MonoBehaviour
     {
         Debug.Log("Trigger girdi");
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
-        Debug.Log("Triggerdan çikti");
+        Debug.Log("Trigger çıktı");
     }
 }
