@@ -11,9 +11,11 @@ public class PlayerControllers : MonoBehaviour
     private Vector3 defaultLocalScale;
     public bool onGround;
     private bool canDoubleJump;
+    private Animator myAnimator;
     // Start is called before the first frame update
     void Start()
     {
+        myAnimator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
         defaultLocalScale = transform.localScale;
     }
@@ -23,8 +25,11 @@ public class PlayerControllers : MonoBehaviour
     {
         //Debug.Log(Input.GetAxis("Horizontal"));
         mySpeedX = Input.GetAxis("Horizontal");
+        myAnimator.SetFloat("Speed", Mathf.Abs(mySpeedX));
         myBody.velocity = new Vector2(mySpeedX * speed, myBody.velocity.y);
 
+
+        #region playerın sağ ve sol hareket yönine göre dönmesi
         if (mySpeedX > 0)
         {
             transform.localScale = new Vector3(defaultLocalScale.x, defaultLocalScale.y, defaultLocalScale.z);
@@ -34,13 +39,17 @@ public class PlayerControllers : MonoBehaviour
             transform.localScale = new Vector3(-defaultLocalScale.x, defaultLocalScale.y, defaultLocalScale.z);
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        #endregion
+
+        #region playerın zıplamasının kontrol edilmesi
+        if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Debug.Log("Boşluk tuşuna basıldı.");
             if (onGround==true)
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                 canDoubleJump = true;
+                myAnimator.SetTrigger("Jump");
             }
             else
             {
@@ -52,5 +61,6 @@ public class PlayerControllers : MonoBehaviour
             }
             
         }
+        #endregion
     }
 }
