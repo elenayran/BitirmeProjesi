@@ -44,7 +44,7 @@ public class PlayerControllers : MonoBehaviour
         #region playerın zıplamasının kontrol edilmesi
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            // Debug.Log("Boşluk tuşuna basıldı.");
+            // Debug.Log("yukarı ok tuşuna basıldı.");
             if (onGround==true)
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
@@ -60,6 +60,14 @@ public class PlayerControllers : MonoBehaviour
                 }
             }
             
+        }
+        #endregion
+
+        #region attack kontrolü
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            myAnimator.SetTrigger("Attack");
         }
         #endregion
     }
