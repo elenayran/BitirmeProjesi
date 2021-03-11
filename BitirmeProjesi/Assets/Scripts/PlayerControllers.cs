@@ -70,5 +70,23 @@ public class PlayerControllers : MonoBehaviour
             myAnimator.SetTrigger("Attack");
         }
         #endregion
+
+  
+        
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Enemy")
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        myAnimator.SetFloat("Speed", 0);
+        myAnimator.SetTrigger("Die");
+        myBody.constraints = RigidbodyConstraints2D.FreezePosition;
+        enabled = false;
     }
 }

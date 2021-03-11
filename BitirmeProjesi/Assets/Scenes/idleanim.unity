@@ -210,8 +210,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.11570583, y: 0.3526064}
-  m_Size: {x: 3.6414921, y: 5.154109}
+  m_Offset: {x: 0.005877318, y: 0.3526064}
+  m_Size: {x: 3.8846583, y: 5.1541095}
   m_Direction: 0
 --- !u!212 &87363606
 SpriteRenderer:
@@ -738,7 +738,7 @@ GameObject:
   - component: {fileID: 1805730957}
   m_Layer: 0
   m_Name: monster
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
