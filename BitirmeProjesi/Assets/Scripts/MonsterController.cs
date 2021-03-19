@@ -10,9 +10,13 @@ public class MonsterController : MonoBehaviour
     [SerializeField] float monter2Speed;
     private Rigidbody2D myBody;
     [SerializeField] LayerMask engel;
+    private static int totalMonsterNumber = 0;
+
     // Start is called before the first frame update
     void Start()
     {
+        totalMonsterNumber++;
+        Debug.Log("Düşman ismi:" + gameObject.name + "oluştu."+ "Oyundaki toplam düşman sayısı:"+ totalMonsterNumber);
         width = GetComponent<SpriteRenderer>().bounds.extents.x;
         monster2Animator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
