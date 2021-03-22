@@ -89,4 +89,5 @@ public class PlayerControllers : MonoBehaviour
         myBody.constraints = RigidbodyConstraints2D.FreezePosition;
         enabled = false;
     }
+    
 }
