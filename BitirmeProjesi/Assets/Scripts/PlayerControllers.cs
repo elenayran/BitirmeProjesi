@@ -45,7 +45,7 @@ public class PlayerControllers : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             // Debug.Log("yukarı ok tuşuna basıldı.");
-            if (onGround==true)
+            if (onGround == true)
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                 canDoubleJump = true;
@@ -53,13 +53,13 @@ public class PlayerControllers : MonoBehaviour
             }
             else
             {
-                if (canDoubleJump==true)
+                if (canDoubleJump == true)
                 {
                     myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                     canDoubleJump = false;
                 }
             }
-            
+
         }
         #endregion
 
@@ -71,8 +71,8 @@ public class PlayerControllers : MonoBehaviour
         }
         #endregion
 
-  
-        
+
+
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -80,14 +80,14 @@ public class PlayerControllers : MonoBehaviour
         {
             Die();
         }
-    }
 
-    void Die()
-    {
-        myAnimator.SetFloat("Speed", 0);
-        myAnimator.SetTrigger("Die");
-        myBody.constraints = RigidbodyConstraints2D.FreezePosition;
-        enabled = false;
+        void Die()
+        {
+            myAnimator.SetFloat("Speed", 0);
+            myAnimator.SetTrigger("Die");
+            myBody.constraints = RigidbodyConstraints2D.FreezePosition;
+            enabled = false;
+        }
+
     }
-    
 }
