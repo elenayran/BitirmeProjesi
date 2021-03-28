@@ -12,6 +12,14 @@ public class PlayerControllers : MonoBehaviour
     public bool onGround;
     private bool canDoubleJump;
     private Animator myAnimator;
+
+    public Transform attackPoint;
+    public float attackRange = 0.5f;
+    public LayerMask enemyLayers;
+    public int attackDamage=40;
+    public float attackRate = 2f;
+    float nextAttactTime= 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,29 +73,42 @@ public class PlayerControllers : MonoBehaviour
 
         #region attack kontrolü
 
-        if (Input.GetKeyDown(KeyCode.Space))
+
+        if (Time.time>=nextAttactTime)
         {
-            myAnimator.SetTrigger("Attack");
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                Attack();
+                nextAttactTime = Time.time + 1f / attackRange;
+            }
+
         }
+       
         #endregion
 
 
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    
+    void Attack()
     {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            Die();
-        }
+        myAnimator.SetTrigger("Attack");
 
-        void Die()
-        {
-            myAnimator.SetFloat("Speed", 0);
-            myAnimator.SetTrigger("Die");
-            myBody.constraints = RigidbodyConstraints2D.FreezePosition;
-            enabled = false;
-        }
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayers);
 
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<MonsterManager>().TakeDamage(attackDamage);
+        }
     }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null)
+            return;
+
+        Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+    }
+
+
 }

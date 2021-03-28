@@ -4,38 +4,48 @@ using UnityEngine;
 
 public class MonsterManager : MonoBehaviour
 {
+    public Animator Animator;
+    private Rigidbody2D myBody;
 
-    public float health;
-    public float damage;
 
-    bool colliderBusy = false;
+    public int maxHealth=100;
+    int currentHealth;
+
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        currentHealth = maxHealth;
+        myBody = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
-    void Update()
+  public void TakeDamage(int damage)
     {
-        
-    }
+        Animator.SetTrigger("HurtMonster2");
+        Animator.SetTrigger("HurtMonster");
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "Player" && !colliderBusy)
+        currentHealth -= damage;
+
+        if (currentHealth <= 0)
         {
-            colliderBusy = true;
-            collision.GetComponent<PlayerManager>().GetDamage(damage);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag=="Player")
-        {
-            colliderBusy = false;
+            Die();
 
         }
     }
+    void Die()
+    {
+        Debug.Log("MONSTER ÖLDÜ");
+        Animator.SetBool("DieMonster", true);
+        Animator.SetBool("DieMonster2", true);
+
+        
+        GetComponent<Collider2D>().enabled = false;
+        this.enabled = false;
+        myBody.constraints = RigidbodyConstraints2D.FreezePosition;
+        
+
+    }
+
+
+    
 }

@@ -50,4 +50,6 @@ public class MonsterController : MonoBehaviour
         Vector3 playerRealPosition = transform.position + (transform.right * width / 4);
         Gizmos.DrawLine(playerRealPosition, playerRealPosition + new Vector3(0, -2f, 0));
     }
+
+    
 }

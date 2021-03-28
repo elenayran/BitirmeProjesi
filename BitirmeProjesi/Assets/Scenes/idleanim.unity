@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &14807491
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 14807492}
+  m_Layer: 11
+  m_Name: AttackPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &14807492
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 14807491}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 2.03, y: -1.02, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 87363607}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &15117545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -338,12 +368,12 @@ GameObject:
   - component: {fileID: 60926030}
   - component: {fileID: 60926029}
   - component: {fileID: 60926028}
-  - component: {fileID: 60926027}
   - component: {fileID: 60926026}
   - component: {fileID: 60926025}
-  m_Layer: 0
+  - component: {fileID: 60926032}
+  m_Layer: 10
   m_Name: monster (1)
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -414,20 +444,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7804682, y: 5.22213}
   m_EdgeRadius: 0
---- !u!114 &60926027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 60926023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  damage: 10
 --- !u!50 &60926028
 Rigidbody2D:
   serializedVersion: 4
@@ -462,7 +478,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monterSpeed: 5
-  stoppingDistance: 5
+  stoppingDistance: 0
 --- !u!95 &60926030
 Animator:
   serializedVersion: 3
@@ -532,6 +548,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &60926032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60926023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 60926030}
+  maxHealth: 100
 --- !u!4 &82104574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4204898209876556269, guid: d61a2f40db4adef4fb59e969bea49348,
@@ -552,10 +582,9 @@ GameObject:
   - component: {fileID: 87363604}
   - component: {fileID: 87363603}
   - component: {fileID: 87363602}
-  - component: {fileID: 87363608}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Player
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -594,6 +623,13 @@ MonoBehaviour:
   speed: 10
   jumpPower: 8
   onGround: 0
+  attackPoint: {fileID: 14807492}
+  attackRange: -1.58
+  enemyLayers:
+    serializedVersion: 2
+    m_Bits: 1536
+  attackDamage: 40
+  attackRate: 2
 --- !u!50 &87363604
 Rigidbody2D:
   serializedVersion: 4
@@ -689,26 +725,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 87363601}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -41.56, y: -0.8, z: 0}
+  m_LocalPosition: {x: -42.66, y: -0.89, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1786282539}
+  - {fileID: 14807492}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &87363608
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87363601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f3d1ac0479309048970274fe164e60e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
 --- !u!1001 &102837596
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2529,12 +2553,12 @@ GameObject:
   - component: {fileID: 459404824}
   - component: {fileID: 459404822}
   - component: {fileID: 459404821}
-  - component: {fileID: 459404826}
   - component: {fileID: 459404827}
   - component: {fileID: 459404823}
-  m_Layer: 0
+  - component: {fileID: 459404828}
+  m_Layer: 10
   m_Name: monster2 (1)
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2686,20 +2710,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &459404826
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 459404819}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  damage: 10
 --- !u!61 &459404827
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2726,6 +2736,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.6484647, y: 5.2999477}
   m_EdgeRadius: 0
+--- !u!114 &459404828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 459404819}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 459404822}
+  maxHealth: 100
 --- !u!1 &460798570
 GameObject:
   m_ObjectHideFlags: 0
@@ -5082,12 +5106,12 @@ GameObject:
   - component: {fileID: 1515816661}
   - component: {fileID: 1515816662}
   - component: {fileID: 1515816664}
-  - component: {fileID: 1515816665}
   - component: {fileID: 1515816666}
   - component: {fileID: 1515816663}
-  m_Layer: 0
+  - component: {fileID: 1515816665}
+  m_Layer: 10
   m_Name: monster2
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5251,8 +5275,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  damage: 10
+  Animator: {fileID: 1515816662}
+  maxHealth: 100
 --- !u!61 &1515816666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5292,12 +5316,12 @@ GameObject:
   - component: {fileID: 1531023206}
   - component: {fileID: 1531023205}
   - component: {fileID: 1531023204}
-  - component: {fileID: 1531023203}
   - component: {fileID: 1531023202}
   - component: {fileID: 1531023201}
-  m_Layer: 0
+  - component: {fileID: 1531023208}
+  m_Layer: 10
   m_Name: monster (2)
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5368,20 +5392,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7804682, y: 5.22213}
   m_EdgeRadius: 0
---- !u!114 &1531023203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1531023199}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  damage: 10
 --- !u!50 &1531023204
 Rigidbody2D:
   serializedVersion: 4
@@ -5416,7 +5426,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monterSpeed: 5
-  stoppingDistance: 5
+  stoppingDistance: 0
 --- !u!95 &1531023206
 Animator:
   serializedVersion: 3
@@ -5486,6 +5496,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1531023208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1531023199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 1531023206}
+  maxHealth: 100
 --- !u!1 &1560524235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6080,7 +6104,7 @@ GameObject:
   - component: {fileID: 1786282539}
   - component: {fileID: 1786282540}
   - component: {fileID: 1786282541}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trigger Control
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6212,12 +6236,12 @@ GameObject:
   - component: {fileID: 1805730953}
   - component: {fileID: 1805730957}
   - component: {fileID: 1805730958}
-  - component: {fileID: 1805730959}
   - component: {fileID: 1805730960}
   - component: {fileID: 1805730956}
-  m_Layer: 0
+  - component: {fileID: 1805730961}
+  m_Layer: 10
   m_Name: monster
-  m_TagString: Enemy
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6344,7 +6368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monterSpeed: 5
-  stoppingDistance: 5
+  stoppingDistance: 0
 --- !u!50 &1805730958
 Rigidbody2D:
   serializedVersion: 4
@@ -6366,20 +6390,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1805730959
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1805730952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  damage: 10
 --- !u!61 &1805730960
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6406,6 +6416,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3.7804682, y: 5.22213}
   m_EdgeRadius: 0
+--- !u!114 &1805730961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805730952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b5148ed0c6d5f94b9626a2b821b63c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 1805730953}
+  maxHealth: 100
 --- !u!1001 &1831867945
 PrefabInstance:
   m_ObjectHideFlags: 0
