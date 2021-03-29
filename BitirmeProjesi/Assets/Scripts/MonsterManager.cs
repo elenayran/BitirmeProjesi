@@ -10,13 +10,14 @@ public class MonsterManager : MonoBehaviour
 
     public int maxHealth=100;
     int currentHealth;
-
+    public bool isAlive;
     
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         myBody = GetComponent<Rigidbody2D>();
+        isAlive = true;
     }
 
   public void TakeDamage(int damage)
@@ -34,6 +35,7 @@ public class MonsterManager : MonoBehaviour
     }
     void Die()
     {
+        isAlive = false;
         Debug.Log("MONSTER ÖLDÜ");
         Animator.SetBool("DieMonster", true);
         Animator.SetBool("DieMonster2", true);

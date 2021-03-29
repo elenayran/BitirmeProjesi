@@ -562,6 +562,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 60926030}
   maxHealth: 100
+  isAlive: 0
 --- !u!4 &82104574 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4204898209876556269, guid: d61a2f40db4adef4fb59e969bea49348,
@@ -584,7 +585,7 @@ GameObject:
   - component: {fileID: 87363602}
   m_Layer: 11
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1455,6 +1456,8 @@ GameObject:
   m_Component:
   - component: {fileID: 210608915}
   - component: {fileID: 210608914}
+  - component: {fileID: 210608917}
+  - component: {fileID: 210608916}
   m_Layer: 0
   m_Name: door1
   m_TagString: Untagged
@@ -1526,6 +1529,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &210608916
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210608913}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!114 &210608917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210608913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb269d2f8e6f4542b685ac4bd22b66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsOpen: 0
 --- !u!4 &223923710 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7236856464052250109, guid: cbb626542aad8b44f9e0843bbc4de90f,
@@ -2750,6 +2792,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 459404822}
   maxHealth: 100
+  isAlive: 0
 --- !u!1 &460798570
 GameObject:
   m_ObjectHideFlags: 0
@@ -5277,6 +5320,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 1515816662}
   maxHealth: 100
+  isAlive: 0
 --- !u!61 &1515816666
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5510,6 +5554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 1531023206}
   maxHealth: 100
+  isAlive: 0
 --- !u!1 &1560524235
 GameObject:
   m_ObjectHideFlags: 0
@@ -6430,6 +6475,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Animator: {fileID: 1805730953}
   maxHealth: 100
+  isAlive: 0
 --- !u!1001 &1831867945
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6637,9 +6683,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1854685025}
   - component: {fileID: 1854685024}
+  - component: {fileID: 1854685027}
+  - component: {fileID: 1854685026}
   m_Layer: 0
   m_Name: lever1
-  m_TagString: Untagged
+  m_TagString: Lever
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6708,6 +6756,45 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1854685026
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854685023}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.64, y: 0.64}
+    newSize: {x: 0.64, y: 0.64}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.64, y: 0.64}
+  m_EdgeRadius: 0
+--- !u!114 &1854685027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1854685023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b83e334a1f4d1c449d17c64eb69e606, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  door: {fileID: 0}
 --- !u!1001 &1892882910
 PrefabInstance:
   m_ObjectHideFlags: 0
