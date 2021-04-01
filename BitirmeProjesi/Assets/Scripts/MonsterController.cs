@@ -12,6 +12,11 @@ public class MonsterController : MonoBehaviour
     [SerializeField] LayerMask engel;
     private static int totalMonsterNumber = 0;
 
+
+
+    private PlayerControllers characterController;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -41,7 +46,22 @@ public class MonsterController : MonoBehaviour
         {
             transform.eulerAngles += new Vector3(0, 180f, 0);
         }
-        
+
+
+
+        if (Vector2.Distance(transform.position, characterController.transform.position) < 15)
+        {
+            Attack2();
+
+        }
+
+    }
+
+
+    void Attack2()
+    {
+        monster2Animator.SetTrigger("AttackMonster2");
+
     }
 
     private void OnDrawGizmos()

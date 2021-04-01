@@ -20,7 +20,10 @@ public class MonsterManager : MonoBehaviour
         isAlive = true;
     }
 
-  public void TakeDamage(int damage)
+
+  
+
+    public void TakeDamage(int damage)
     {
         Animator.SetTrigger("HurtMonster2");
         Animator.SetTrigger("HurtMonster");
