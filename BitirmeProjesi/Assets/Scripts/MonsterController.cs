@@ -49,20 +49,20 @@ public class MonsterController : MonoBehaviour
 
 
 
-        if (Vector2.Distance(transform.position, characterController.transform.position) < 15)
-        {
-            Attack2();
+        //if (Vector2.Distance(transform.position, characterController.transform.position) < 15)
+        //{
+        //    Attack2();
 
-        }
-
-    }
-
-
-    void Attack2()
-    {
-        monster2Animator.SetTrigger("AttackMonster2");
+        //}
 
     }
+
+
+    //void Attack2()
+    //{
+    //    monster2Animator.SetTrigger("AttackMonster2");
+
+    //}
 
     private void OnDrawGizmos()
     {
