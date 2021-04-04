@@ -12,10 +12,11 @@ public class MonsterFollow : MonoBehaviour
     private PlayerControllers playerControllers;
     private MonsterManager MonsterManager;
     private SpriteRenderer spriteRenderer;
-
+    
     // Start is called before the first frame update
     void Start()
     {
+        playerControllers = FindObjectOfType<PlayerControllers>();
         monsterAnimator = GetComponent<Animator>();
         playerControllers = GameObject.Find("Player").GetComponent<PlayerControllers>();
         target = playerControllers.transform;
@@ -49,11 +50,22 @@ public class MonsterFollow : MonoBehaviour
 
             }
         }
-     
-    
-       
 
-        
-       
+
+
+
+        if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10)
+        {
+            Attack3();
+
+        }
+
+
+    }
+
+    void Attack3()
+    {
+        monsterAnimator.SetTrigger("AttackMonster");
+
     }
 }

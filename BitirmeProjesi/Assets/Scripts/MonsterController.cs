@@ -13,13 +13,16 @@ public class MonsterController : MonoBehaviour
     private static int totalMonsterNumber = 0;
 
 
-
+    public Transform monster2AttackPoint;
+    public float monster2AttackRange = 0.5f;
+    public LayerMask playerLayers;
     private PlayerControllers characterController;
 
 
     // Start is called before the first frame update
     void Start()
     {
+        characterController = FindObjectOfType<PlayerControllers>();
         totalMonsterNumber++;
         Debug.Log("Düşman ismi:" + gameObject.name + "oluştu."+ "Oyundaki toplam düşman sayısı:"+ totalMonsterNumber);
         width = GetComponent<SpriteRenderer>().bounds.extents.x;
@@ -31,7 +34,8 @@ public class MonsterController : MonoBehaviour
     void Update()
     {
         monster2Animator.SetFloat("SpeedMonster2", Mathf.Abs(monter2Speed));
-        myBody.velocity = new Vector2(transform.right.x * monter2Speed, 0f);
+        //myBody.velocity = new Vector2(transform.right.x * monter2Speed, 0f);
+        myBody.velocity = new Vector2(transform.right.x * monter2Speed, myBody.velocity.y);
         RaycastHit2D hit = Physics2D.Raycast(transform.position + (transform.right * width/2), Vector2.down, 2f,engel);
         if (hit.collider != null)
         {
@@ -49,20 +53,37 @@ public class MonsterController : MonoBehaviour
 
 
 
-        //if (Vector2.Distance(transform.position, characterController.transform.position) < 15)
-        //{
-        //    Attack2();
+        if (Vector2.Distance(transform.position, characterController.transform.position) < 10)
+        {
+            Attack2();
 
-        //}
+        }
 
     }
 
 
-    //void Attack2()
-    //{
-    //    monster2Animator.SetTrigger("AttackMonster2");
+    void Attack2()
+    {
+        monster2Animator.SetTrigger("AttackMonster2");
 
-    //}
+
+       Collider2D[] hitPlayer =  Physics2D.OverlapCircleAll(monster2AttackPoint.position, monster2AttackRange, playerLayers);
+
+        foreach (Collider2D player in hitPlayer)
+        {
+            Debug.Log("vurdu." + player.name);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+
+        if (monster2AttackPoint == null)
+        {
+            return;
+
+        }
+        Gizmos.DrawWireSphere(monster2AttackPoint.position, monster2AttackRange);
+    }
 
     private void OnDrawGizmos()
     {

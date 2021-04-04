@@ -13,6 +13,7 @@ public class Pendulum : MonoBehaviour
     {
         body2d = GetComponent<Rigidbody2D>();
         body2d.angularVelocity = velocityThreshold;
+        
     }
 
     // Update is called once per frame
@@ -33,7 +34,7 @@ public class Pendulum : MonoBehaviour
         else if (transform.rotation.z < 0 &&  transform.rotation.z >leftPushRange && (body2d.angularVelocity < 0) &&body2d.angularVelocity >velocityThreshold * -1)
         {
 
-            body2d.angularVelocity = velocityThreshold * 1;
+            body2d.angularVelocity = velocityThreshold * -1;
         }
 
     }
