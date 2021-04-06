@@ -1096,7 +1096,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138372953}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.13, y: -1.8, z: -0.34589845}
+  m_LocalPosition: {x: 3.48, y: -1.8, z: -0.34589845}
   m_LocalScale: {x: 2.4999998, y: 2.8986516, z: 1}
   m_Children: []
   m_Father: {fileID: 459404820}
@@ -2168,7 +2168,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 259033006}
   m_LocalRotation: {x: -0, y: -0, z: -0.007850733, w: 0.9999692}
-  m_LocalPosition: {x: -69.6592, y: -15.544832, z: 46.007812}
+  m_LocalPosition: {x: -64.18, y: -15.63, z: 46.007812}
   m_LocalScale: {x: 0.93749994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 644365462}
@@ -3017,7 +3017,17 @@ PrefabInstance:
     - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
         type: 3}
       propertyPath: velocityThreshold
-      value: 145
+      value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
+        type: 3}
+      propertyPath: leftPushRange
+      value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
+        type: 3}
+      propertyPath: rigthPushRange
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e71b913c1dba9d14eb810fc28279a827, type: 3}
@@ -3518,6 +3528,11 @@ MonoBehaviour:
   engel:
     serializedVersion: 2
     m_Bits: 256
+  monster2AttackPoint: {fileID: 138372954}
+  monster2AttackRange: 0.67
+  playerLayers:
+    serializedVersion: 2
+    m_Bits: 1536
 --- !u!95 &459404822
 Animator:
   serializedVersion: 3
@@ -6074,6 +6089,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1027155960}
   - component: {fileID: 1027155961}
+  - component: {fileID: 1027155962}
   m_Layer: 0
   m_Name: saw_track_right_edge
   m_TagString: Untagged
@@ -6145,6 +6161,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1027155962
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1027155959}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.021823078, y: 0.011807919}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.74, y: 0.34}
+    newSize: {x: 0.74, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.69635385, y: 0.2848959}
+  m_EdgeRadius: 0
 --- !u!4 &1033349078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1816576567815719291, guid: d8abda90e03cbe842b3456e536fb26d1,
@@ -7393,6 +7435,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1245219765}
   - component: {fileID: 1245219766}
+  - component: {fileID: 1245219768}
+  - component: {fileID: 1245219767}
   m_Layer: 0
   m_Name: saw_track_left_edge
   m_TagString: Untagged
@@ -7464,6 +7508,50 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1245219767
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245219764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.016367987, y: 0.011807978}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.74, y: 0.34}
+    newSize: {x: 0.74, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.70726407, y: 0.28489614}
+  m_EdgeRadius: 0
+--- !u!68 &1245219768
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245219764}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.37, y: 0}
+  - {x: 0.37, y: 0}
 --- !u!4 &1248061563 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 226910514567774218, guid: 49830f594ac6c9b4ba19751a9578bfe8,
@@ -7829,6 +7917,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1378617734}
   - component: {fileID: 1378617735}
+  - component: {fileID: 1378617736}
   m_Layer: 0
   m_Name: saw_track_repeating_center
   m_TagString: Untagged
@@ -7900,6 +7989,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &1378617736
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1378617733}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.01574412}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.71, y: 0.34}
+    newSize: {x: 0.71, y: 0.34}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.71, y: 0.26128024}
+  m_EdgeRadius: 0
 --- !u!1 &1381843137
 GameObject:
   m_ObjectHideFlags: 0
@@ -9882,6 +9997,7 @@ GameObject:
   - component: {fileID: 1794000467}
   - component: {fileID: 1794000466}
   - component: {fileID: 1794000468}
+  - component: {fileID: 1794000469}
   m_Layer: 0
   m_Name: rotating_saw_01
   m_TagString: Untagged
@@ -9972,6 +10088,41 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!68 &1794000469
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794000465}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -1.0884876, y: -0.6647653}
+  - {x: -1.2453799, y: -0.32429513}
+  - {x: -1.0042932, y: -0.36531517}
+  - {x: -1.0223184, y: 0.19138795}
+  - {x: -0.8570538, y: 0.099283546}
+  - {x: -0.57647663, y: 0.5544137}
+  - {x: -0.4097638, y: 0.43249452}
+  - {x: 0.0505825, y: 0.6799103}
+  - {x: 0.08464122, y: 0.44256467}
+  - {x: 0.61085176, y: 0.51462054}
+  - {x: 0.50091034, y: 0.29920155}
+  - {x: 1.0440598, y: 0.17529453}
+  - {x: 0.90024054, y: -0.01017563}
+  - {x: 1.2839597, y: -0.33635247}
+  - {x: 1.3152018, y: -0.4188416}
+  - {x: 0.96025074, y: -0.35001054}
+  - {x: 0.95860106, y: -0.36214408}
+  - {x: 0.9587418, y: -0.36152703}
+  - {x: 1.1534058, y: -0.664765}
 --- !u!1001 &1805204927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12544,17 +12695,17 @@ PrefabInstance:
     - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
         type: 3}
       propertyPath: leftPushRange
-      value: -0.8
+      value: -0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
         type: 3}
       propertyPath: rigthPushRange
-      value: 0.8
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 7085413165799638963, guid: e71b913c1dba9d14eb810fc28279a827,
         type: 3}
       propertyPath: velocityThreshold
-      value: 145
+      value: 120
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e71b913c1dba9d14eb810fc28279a827, type: 3}
