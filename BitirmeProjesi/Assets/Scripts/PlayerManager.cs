@@ -1,45 +1,54 @@
-﻿//using System.Collections;
-//using System.Collections.Generic;
-//using UnityEngine;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-//public class PlayerManager : MonoBehaviour
-//{
-//    public float health;
-//    bool dead = false;
+public class PlayerManager : MonoBehaviour
+{
+    public int playerMaxHealth=100;
+    int playerCurrentHealth;
+    private Rigidbody2D myBody;
 
-//    // Start is called before the first frame update
-//    void Start()
-//    {
-        
-//    }
+    public Animator animator;
+    public bool isAlive;
 
-//    // Update is called once per frame
-//    void Update()
-//    {
-        
-//    }
+    // Start is called before the first frame update
+    void Start()
+    {
+        playerCurrentHealth = playerMaxHealth;
+        myBody = GetComponent<Rigidbody2D>();
+        isAlive = true;
+    }
 
-//    // hasar durumu 
-//    public void GetDamage(float damage)
-//    {
-//        if (health - damage >= 0)
-//        {
-//            health -= damage;
 
-//        }
-//        else
-//        {
-//            health = 0;
-//        }
-//        AmIDead();
-        
-//    }
+    public void PlayerTakeDamage(int playerDamage)
+    {
+        playerCurrentHealth -= playerDamage;
 
-//    void AmIDead()
-//    {
-//        if (health <= 0)
-//        {
-//            dead = true;
-//        }
-//    }
-//}
+        animator.SetTrigger("Hurt");
+
+        if (playerCurrentHealth <= 0)
+        {
+            PlayerDie();
+
+        }
+    }
+
+    void PlayerDie()
+    {
+        isAlive = false;
+        Debug.Log("playar öldü");
+        animator.SetBool("Die", true);
+        this.enabled = false;
+
+        GetComponent<Collider2D>().enabled = false;
+        myBody.constraints = RigidbodyConstraints2D.FreezePosition;
+
+    }
+    // Update is called once per frame
+    void Update()
+    {
+
+    }
+
+ 
+}

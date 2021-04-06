@@ -12,7 +12,14 @@ public class MonsterFollow : MonoBehaviour
     private PlayerControllers playerControllers;
     private MonsterManager MonsterManager;
     private SpriteRenderer spriteRenderer;
-    
+
+
+    public Transform monsterAttackPoint;
+    public float monsterAttackRange = 0.5f;
+    public LayerMask playerLayers;
+    public int monsterAttackDamage = 40;
+    public float monsterAttackRate = 2f;
+    float monsterNextAttackTime = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -67,5 +74,21 @@ public class MonsterFollow : MonoBehaviour
     {
         monsterAnimator.SetTrigger("AttackMonster");
 
+        Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(monsterAttackPoint.position, monsterAttackRange, playerLayers);
+
+        foreach (Collider2D player in hitPlayer)
+        {
+            player.GetComponent<PlayerManager>().PlayerTakeDamage(monsterAttackDamage);
+        }
+    }
+    private void OnDrawGizmosSelected()
+    {
+
+        if (monsterAttackPoint == null)
+        {
+            return;
+
+        }
+        Gizmos.DrawWireSphere(monsterAttackPoint.position, monsterAttackRange);
     }
 }

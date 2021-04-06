@@ -17,6 +17,9 @@ public class MonsterController : MonoBehaviour
     public float monster2AttackRange = 0.5f;
     public LayerMask playerLayers;
     private PlayerControllers characterController;
+    public int monster2AttackDamage = 40;
+    public float monster2AttackRate = 2f;
+    float monsterNextAttackTime = 0f;
 
 
     // Start is called before the first frame update
@@ -51,13 +54,17 @@ public class MonsterController : MonoBehaviour
             transform.eulerAngles += new Vector3(0, 180f, 0);
         }
 
-
-
-        if (Vector2.Distance(transform.position, characterController.transform.position) < 10)
+        if (Time.time>=monsterNextAttackTime)
         {
-            Attack2();
+            if (Vector2.Distance(transform.position, characterController.transform.position) < 10)
+            {
+                Attack2();
+                monsterNextAttackTime = Time.time + 1f / monster2AttackRate;
 
+            }
         }
+
+       
 
     }
 
@@ -71,7 +78,7 @@ public class MonsterController : MonoBehaviour
 
         foreach (Collider2D player in hitPlayer)
         {
-            Debug.Log("vurdu." + player.name);
+            player.GetComponent<PlayerManager>().PlayerTakeDamage(monster2AttackDamage);
         }
     }
     private void OnDrawGizmosSelected()
