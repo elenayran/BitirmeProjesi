@@ -52,7 +52,7 @@ public class PlayerControllers : MonoBehaviour
         #region playerın zıplamasının kontrol edilmesi
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            // Debug.Log("yukarı ok tuşuna basıldı.");
+             Debug.Log("yukarı ok tuşuna basıldı.");
             if (onGround == true)
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
