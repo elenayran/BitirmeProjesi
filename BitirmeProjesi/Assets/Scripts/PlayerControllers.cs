@@ -7,11 +7,15 @@ public class PlayerControllers : MonoBehaviour
     private float mySpeedX;
     [SerializeField] float speed;
     [SerializeField] float jumpPower;
+   
     private Rigidbody2D myBody;
     private Vector3 defaultLocalScale;
     public bool onGround;
     private bool canDoubleJump;
     private Animator myAnimator;
+
+    public float distance;
+    public LayerMask WhatIsLadder;
 
     public Transform attackPoint;
     public float attackRange = 0.5f;
@@ -110,5 +114,8 @@ public class PlayerControllers : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-
+    private void FixedUpdate()
+    {
+        RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, WhatIsLadder);
+    }
 }
