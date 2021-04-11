@@ -67,7 +67,7 @@ public class MonsterFollow : MonoBehaviour
 
         }
 
-
+        
     }
 
     void Attack3()
