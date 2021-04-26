@@ -32,7 +32,6 @@ public class MonsterController : MonoBehaviour
         monster2Animator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -64,11 +63,7 @@ public class MonsterController : MonoBehaviour
             }
         }
 
-       
-
     }
-
-
     void Attack2()
     {
         monster2Animator.SetTrigger("AttackMonster2");

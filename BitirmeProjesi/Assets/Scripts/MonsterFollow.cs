@@ -58,15 +58,11 @@ public class MonsterFollow : MonoBehaviour
             }
         }
 
-
-
-
         if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10)
         {
             Attack3();
 
         }
-
         
     }
 
