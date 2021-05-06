@@ -23,6 +23,8 @@ public class Door : MonoBehaviour
         if (IsOpen && collision.gameObject.tag == "Player")
         {
             Debug.Log("Kapı açık ve karakter içinden geçebilir.");
+
+
         }
     }
 }

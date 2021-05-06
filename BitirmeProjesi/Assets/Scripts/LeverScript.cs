@@ -8,6 +8,8 @@ public class LeverScript : MonoBehaviour
     private PlayerControllers characterController;
     public Door door;
 
+    public Animator animator;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,8 @@ public class LeverScript : MonoBehaviour
                 {
                     Debug.Log("Levera tıkladın.");
                     door.IsOpen = true;
+                    animator.SetTrigger("DoorOpen1");
+
                 }
             }
            
