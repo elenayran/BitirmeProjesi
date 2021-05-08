@@ -4,15 +4,10 @@ using UnityEngine;
 
 public class TrapsTrigger : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] GameObject player;
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        
-    }
+        player.GetComponent<PlayerControllers>().onGround = true;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
