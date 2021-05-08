@@ -57,23 +57,31 @@ public class MonsterController : MonoBehaviour
         {
             if (Vector2.Distance(transform.position, characterController.transform.position) < 10)
             {
-                Attack2();
+                Attack();
                 monsterNextAttackTime = Time.time + 1f / monster2AttackRate;
 
             }
         }
 
     }
-    void Attack2()
+    void Attack()
     {
-        monster2Animator.SetTrigger("AttackMonster2");
+      
 
 
        Collider2D[] hitPlayer =  Physics2D.OverlapCircleAll(monster2AttackPoint.position, monster2AttackRange, playerLayers);
 
+        Debug.Log(hitPlayer.Length);
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<PlayerManager>().PlayerTakeDamage(monster2AttackDamage);
+
+            PlayerManager playerManager = player.GetComponent<PlayerManager>();
+            if (playerManager != null && playerManager.isAlive)
+            {
+                monster2Animator.SetTrigger("AttackMonster");
+                player.GetComponent<PlayerManager>().PlayerTakeDamage(monster2AttackDamage);
+            }
+           
         }
     }
     private void OnDrawGizmosSelected()

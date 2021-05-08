@@ -46,35 +46,37 @@ public class MonsterFollow : MonoBehaviour
                 float diffPosition = target.position.x - transform.position.x;
                 if (diffPosition > 0)
                 {
-                    Debug.Log("Karakter canavarın sağında");
                     spriteRenderer.flipX = true;
                 }
                 else
                 {
-                    Debug.Log("Karakter canavarın solunda");
                     spriteRenderer.flipX = false;
                 }
 
             }
+            if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10)
+            {
+                Attack();
+
+            }
         }
 
-        if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10)
-        {
-            Attack3();
-
-        }
         
     }
 
-    void Attack3()
-    {
-        monsterAnimator.SetTrigger("AttackMonster");
+    void Attack()
+    {     
 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(monsterAttackPoint.position, monsterAttackRange, playerLayers);
-
+        Debug.Log(hitPlayer.Length);
         foreach (Collider2D player in hitPlayer)
         {
-            player.GetComponent<PlayerManager>().PlayerTakeDamage(monsterAttackDamage);
+            PlayerManager playerManager = player.GetComponent<PlayerManager>();
+            if (playerManager != null && playerManager.isAlive)
+            {
+                monsterAnimator.SetTrigger("AttackMonster");
+                player.GetComponent<PlayerManager>().PlayerTakeDamage(monsterAttackDamage);
+            }
         }
     }
     private void OnDrawGizmosSelected()

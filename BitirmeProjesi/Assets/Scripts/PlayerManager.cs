@@ -7,7 +7,7 @@ public class PlayerManager : MonoBehaviour
     public int playerMaxHealth=100;
     int playerCurrentHealth;
     private Rigidbody2D myBody;
-
+    
     public Animator animator;
     public bool isAlive;
 
@@ -37,8 +37,7 @@ public class PlayerManager : MonoBehaviour
     {
         isAlive = false;
         Debug.Log("playar öldü");
-        animator.SetBool("Die", true);
-        this.enabled = false;
+        animator.SetTrigger("Die");
 
         GetComponent<Collider2D>().enabled = false;
         myBody.constraints = RigidbodyConstraints2D.FreezePosition;

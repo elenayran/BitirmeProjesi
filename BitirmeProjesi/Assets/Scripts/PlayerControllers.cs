@@ -77,7 +77,6 @@ public class PlayerControllers : MonoBehaviour
         #region playerın zıplamasının kontrol edilmesi
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-             Debug.Log("yukarı ok tuşuna basıldı.");
             if (onGround == true)
             {
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
@@ -123,7 +122,11 @@ public class PlayerControllers : MonoBehaviour
 
         foreach (Collider2D enemy in hitEnemies)
         {
-            enemy.GetComponent<MonsterManager>().TakeDamage(attackDamage);
+            MonsterManager _monsterManager = enemy.GetComponent<MonsterManager>();
+            if (_monsterManager.isAlive)
+            {
+                enemy.GetComponent<MonsterManager>().TakeDamage(attackDamage);
+            }            
         }
     }
 

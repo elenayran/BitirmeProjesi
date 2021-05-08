@@ -25,7 +25,6 @@ public class MonsterManager : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
-        Animator.SetTrigger("HurtMonster2");
         Animator.SetTrigger("HurtMonster");
 
         currentHealth -= damage;
@@ -41,7 +40,6 @@ public class MonsterManager : MonoBehaviour
         isAlive = false;
         Debug.Log("MONSTER ÖLDÜ");
         Animator.SetBool("DieMonster", true);
-        Animator.SetBool("DieMonster2", true);
 
         
         GetComponent<Collider2D>().enabled = false;
