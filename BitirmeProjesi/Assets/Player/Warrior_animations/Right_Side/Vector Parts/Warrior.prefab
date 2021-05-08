@@ -256,7 +256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804645663302987255}
   - component: {fileID: 4859892619395753080}
-  - component: {fileID: 8878411395921241755}
+  - component: {fileID: 3988392305684824796}
   m_Layer: 0
   m_Name: Face_07
   m_TagString: Untagged
@@ -329,7 +329,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8878411395921241755
+--- !u!114 &3988392305684824796
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -979,7 +979,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5373465527133958652}
   - component: {fileID: 8008222972353643671}
-  - component: {fileID: 8402461640936798886}
+  - component: {fileID: 6493552107802809393}
   m_Layer: 0
   m_Name: Face_01
   m_TagString: Untagged
@@ -1052,7 +1052,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &8402461640936798886
+--- !u!114 &6493552107802809393
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1628,7 +1628,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1124914834166342143}
   - component: {fileID: 9053420371930386932}
-  - component: {fileID: 2037213790374276040}
+  - component: {fileID: 1895250304844768696}
   m_Layer: 0
   m_Name: Slash
   m_TagString: Untagged
@@ -1701,7 +1701,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &2037213790374276040
+--- !u!114 &1895250304844768696
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
