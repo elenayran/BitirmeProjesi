@@ -39,7 +39,7 @@ public class MonsterManager : MonoBehaviour
     {
         isAlive = false;
         Debug.Log("MONSTER ÖLDÜ");
-        Animator.SetBool("DieMonster", true);
+        Animator.SetTrigger("DieMonster");
 
         
         GetComponent<Collider2D>().enabled = false;

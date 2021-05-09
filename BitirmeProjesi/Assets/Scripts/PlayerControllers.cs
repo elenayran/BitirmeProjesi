@@ -41,27 +41,7 @@ public class PlayerControllers : MonoBehaviour
         mySpeedX = Input.GetAxis("Horizontal");
         myAnimator.SetFloat("Speed", Mathf.Abs(mySpeedX));
         myBody.velocity = new Vector2(mySpeedX * speed, myBody.velocity.y);
-        #region
-        //RaycastHit2D hitInfo = Physics2D.Raycast(transform.position, Vector2.up, distance, WhatIsLadder);
-
-        //if (hitInfo.collider !=null)
-        //{
-        //    if (Input.GetKeyDown(KeyCode.DownArrow))
-        //    {
-        //        isClimbing = true;
-
-        //    }
-
-        //}
-
-        //if (isClimbing == true)
-        //{
-        //    inputVertical = Input.GetAxisRaw("Vertical");
-        //    myBody.velocity = new Vector2(myBody.position.x, inputVertical * speed);
-        //    myBody.gravityScale = 0;
-
-        //}
-        #endregion
+       
         #region playerın sağ ve sol hareket yönine göre dönmesi
         if (mySpeedX > 0)
         {
