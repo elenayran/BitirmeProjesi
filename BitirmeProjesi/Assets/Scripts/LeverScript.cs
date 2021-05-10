@@ -27,9 +27,10 @@ public class LeverScript : MonoBehaviour
             {
                 if (hit.collider != null && hit.collider.tag == "Lever")
                 {
+                    animator.SetTrigger("leverOpen");
                     Debug.Log("Levera tıkladın.");
                     door.IsOpen = true;
-                    animator.SetTrigger("DoorOpen1");
+                   
 
                 }
             }

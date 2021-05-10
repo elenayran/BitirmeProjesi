@@ -22,9 +22,12 @@ public class PlayerControllers : MonoBehaviour
     public Transform attackPoint;
     public float attackRange = 0.5f;
     public LayerMask enemyLayers;
-    public int attackDamage=40;
+    public int attackDamage=20;
     public float attackRate = 2f;
     float nextAttactTime= 0f;
+
+
+    private PlayerManager playerManager;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +35,7 @@ public class PlayerControllers : MonoBehaviour
         myAnimator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();
         defaultLocalScale = transform.localScale;
+        playerManager = GetComponent<PlayerManager>();
     }
 
     // Update is called once per frame
@@ -118,5 +122,16 @@ public class PlayerControllers : MonoBehaviour
         Gizmos.DrawWireSphere(attackPoint.position, attackRange);
     }
 
-  
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if (collision.tag == "Traps")
+        {
+            playerManager.PlayerTakeDamage(attackDamage);
+            Debug.Log("HASAR ALINDI");
+
+        }
+
+    }
 }
