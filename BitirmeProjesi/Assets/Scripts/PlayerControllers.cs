@@ -66,6 +66,7 @@ public class PlayerControllers : MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                 canDoubleJump = true;
                 myAnimator.SetTrigger("Jump");
+                
             }
             else
             {
@@ -73,6 +74,7 @@ public class PlayerControllers : MonoBehaviour
                 {
                     myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                     canDoubleJump = false;
+                   
                 }
             }
 
