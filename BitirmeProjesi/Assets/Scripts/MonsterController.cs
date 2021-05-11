@@ -98,7 +98,7 @@ public class MonsterController : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Vector3 playerRealPosition = transform.position + (transform.right * width / 8);
+        Vector3 playerRealPosition = transform.position + (transform.right * width / 4);
         Gizmos.DrawLine(playerRealPosition, playerRealPosition + new Vector3(0, -2f, 0));
     }
 
