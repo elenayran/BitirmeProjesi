@@ -26,6 +26,7 @@ public class MonsterManager : MonoBehaviour
     public void TakeDamage(int damage)
     {
         Animator.SetTrigger("HurtMonster");
+        Debug.Log("canı yandı");
 
         currentHealth -= damage;
 
