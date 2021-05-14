@@ -112,6 +112,8 @@ public class PlayerControllers : MonoBehaviour
             if (_monsterManager.isAlive)
             {
                 enemy.GetComponent<MonsterManager>().TakeDamage(attackDamage);
+
+                
             }            
         }
     }
