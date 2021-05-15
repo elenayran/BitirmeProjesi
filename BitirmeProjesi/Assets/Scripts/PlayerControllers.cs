@@ -45,7 +45,11 @@ public class PlayerControllers : MonoBehaviour
         mySpeedX = Input.GetAxis("Horizontal");
         myAnimator.SetFloat("Speed", Mathf.Abs(mySpeedX));
         myBody.velocity = new Vector2(mySpeedX * speed, myBody.velocity.y);
-       
+
+        if (!playerManager.isAlive) {
+            return;
+        }
+
         #region playerın sağ ve sol hareket yönine göre dönmesi
         if (mySpeedX > 0)
         {
@@ -58,11 +62,13 @@ public class PlayerControllers : MonoBehaviour
 
         #endregion
 
+        Debug.Log("onGround: " + onGround);
+
         #region playerın zıplamasının kontrol edilmesi
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (onGround == true)
-            {
+            {                
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                 canDoubleJump = true;
                 myAnimator.SetTrigger("Jump");
@@ -95,8 +101,6 @@ public class PlayerControllers : MonoBehaviour
         }
        
         #endregion
-
-
 
     }
     

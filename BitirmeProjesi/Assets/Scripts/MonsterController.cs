@@ -27,7 +27,7 @@ public class MonsterController : MonoBehaviour
     {
         characterController = FindObjectOfType<PlayerControllers>();
         totalMonsterNumber++;
-        Debug.Log("Düşman ismi:" + gameObject.name + "oluştu."+ "Oyundaki toplam düşman sayısı:"+ totalMonsterNumber);
+        //Debug.Log("Düşman ismi:" + gameObject.name + "oluştu."+ "Oyundaki toplam düşman sayısı:"+ totalMonsterNumber);
         width = GetComponent<SpriteRenderer>().bounds.extents.x;
         monster2Animator = GetComponent<Animator>();
         myBody = GetComponent<Rigidbody2D>();

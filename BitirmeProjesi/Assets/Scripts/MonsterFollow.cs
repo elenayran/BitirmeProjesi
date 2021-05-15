@@ -68,7 +68,6 @@ public class MonsterFollow : MonoBehaviour
     {     
 
         Collider2D[] hitPlayer = Physics2D.OverlapCircleAll(monsterAttackPoint.position, monsterAttackRange, playerLayers);
-        Debug.Log(hitPlayer.Length);
         foreach (Collider2D player in hitPlayer)
         {
             PlayerManager playerManager = player.GetComponent<PlayerManager>();
