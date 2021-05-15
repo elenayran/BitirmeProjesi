@@ -21,7 +21,7 @@ public class boulder : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randX = Random.Range(-8.4f, 8.4f);
+            randX = Random.Range(68.14f, 75.07f);
             WhereToSpawn = new Vector2(randX, transform.position.y);
             Instantiate(boulders, WhereToSpawn, Quaternion.identity);
 
