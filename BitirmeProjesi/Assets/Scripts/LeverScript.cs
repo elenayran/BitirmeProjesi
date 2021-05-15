@@ -26,14 +26,11 @@ public class LeverScript : MonoBehaviour
             RaycastHit2D[] hits = Physics2D.RaycastAll(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero, Mathf.Infinity);
             foreach (RaycastHit2D hit in hits)
             {
-                if (hit.collider != null && hit.collider.tag == "Lever")
+                if (hit.collider != null && hit.collider.tag == "Lever" && !door.IsOpen)
                 {
                     animator.SetTrigger("leverOpen");
                     Debug.Log("Levera tıkladın.");
                     door.IsOpen = true;
-                    
-                   
-
                 }
             }
            
