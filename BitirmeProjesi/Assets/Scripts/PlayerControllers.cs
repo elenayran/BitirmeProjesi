@@ -144,11 +144,10 @@ public class PlayerControllers : MonoBehaviour
 
         }
 
-        //else if (collision.tag=="Door") ;
-        //{
-        //    WinPanel.active = true;
-
-        //}
+        else if (collision.tag=="Door") 
+        {
+            WinPanel.active = true;
+        }
 
         
 
