@@ -26,6 +26,9 @@ public class PlayerControllers : MonoBehaviour
     public float attackRate = 2f;
     float nextAttactTime= 0f;
 
+    [SerializeField] GameObject WinPanel;
+
+
 
     private PlayerManager playerManager;
 
@@ -133,13 +136,19 @@ public class PlayerControllers : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        
+
         if (collision.tag == "Traps")
         {
             playerManager.PlayerTakeDamage(attackDamage);
             Debug.Log("HASAR ALINDI");
 
         }
+
+        //else if (collision.tag=="Door") ;
+        //{
+        //    WinPanel.active = true;
+
+        //}
 
         
 

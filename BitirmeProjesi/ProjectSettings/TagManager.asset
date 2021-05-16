@@ -10,6 +10,7 @@ TagManager:
   - Lever
   - Traps
   - TrapsGround
+  - Door
   layers:
   - Default
   - TransparentFX

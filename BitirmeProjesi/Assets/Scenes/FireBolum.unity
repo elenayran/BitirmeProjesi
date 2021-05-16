@@ -3939,7 +3939,7 @@ GameObject:
   - component: {fileID: 323589706}
   m_Layer: 0
   m_Name: door1
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3957,7 +3957,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.004717618, y: 0.043824524}
+  m_Offset: {x: 0.009828575, y: -0.024273843}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3968,7 +3968,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.49852878, y: 0.45374614}
+  m_Size: {x: 0.39184368, y: 0.45879048}
   m_EdgeRadius: 0
 --- !u!95 &323589707
 Animator:
@@ -4061,13 +4061,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 323589705}
-  m_LocalRotation: {x: -0, y: 0.34573242, z: -0, w: 0.9383332}
+  m_LocalRotation: {x: -0, y: 0.35531384, z: -0, w: 0.9347471}
   m_LocalPosition: {x: 78.28, y: 2.82, z: 0.04}
   m_LocalScale: {x: 2.4886913, y: 3.6409042, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 40.453, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 41.625, z: 0}
 --- !u!1 &323726503
 GameObject:
   m_ObjectHideFlags: 0
@@ -6653,6 +6653,7 @@ MonoBehaviour:
     m_Bits: 1536
   attackDamage: 40
   attackRate: 2
+  WinPanel: {fileID: 0}
 --- !u!50 &483609427
 Rigidbody2D:
   serializedVersion: 4
@@ -6708,6 +6709,7 @@ MonoBehaviour:
   playerMaxHealth: 100
   animator: {fileID: 483609428}
   isAlive: 0
+  LosePanel: {fileID: 0}
 --- !u!1 &492390263
 GameObject:
   m_ObjectHideFlags: 0
