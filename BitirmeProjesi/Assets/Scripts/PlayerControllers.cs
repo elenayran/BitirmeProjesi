@@ -26,7 +26,9 @@ public class PlayerControllers : MonoBehaviour
     public float attackRate = 2f;
     float nextAttactTime= 0f;
 
-    [SerializeField] GameObject WinPanel;
+    [SerializeField] public GameObject WinPanel;
+    public Door door;
+   
 
 
 
@@ -144,14 +146,37 @@ public class PlayerControllers : MonoBehaviour
 
         }
 
-        else if (collision.tag=="Door") 
+        else if (collision.tag=="Door")
         {
-            WinPanel.active = true;
+
+            //WinPanel.active = true;
+
+            StartCoroutine(Wait(true));
+            
+           
         }
 
-        
+       
+     
+
 
     }
 
-   
+    public IEnumerator Wait(bool win)
+    {
+
+        yield return new WaitForSecondsRealtime(2f);
+        if (win == true)
+        {
+            WinPanel.SetActive(true);
+        }
+        else
+        {
+            playerManager.LosePanel.SetActive(true);
+        }
+
+    }
+
+
+
 }

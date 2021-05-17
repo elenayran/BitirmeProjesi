@@ -11,7 +11,11 @@ public class PlayerManager : MonoBehaviour
     public Animator animator;
     public bool isAlive;
 
-    [SerializeField] GameObject  LosePanel;
+    [SerializeField] public GameObject  LosePanel;
+
+    public PlayerControllers playerControllers;
+  
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +52,10 @@ public class PlayerManager : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         myBody.constraints = RigidbodyConstraints2D.FreezePosition;
 
-        LosePanel.active = true;
+
+
+        PlayerControllers playerControllers = GetComponent<PlayerControllers>(); 
+        StartCoroutine(playerControllers.Wait(false));
 
     }
     // Update is called once per frame
