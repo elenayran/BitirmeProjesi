@@ -7,7 +7,7 @@ public class LeverScript : MonoBehaviour
 
     private PlayerControllers characterController;
     public Door door;
-
+    
     
     public Animator animator;
 

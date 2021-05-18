@@ -152,13 +152,18 @@ public class PlayerControllers : MonoBehaviour
 
         else if (collision.tag=="Door")
         {
+            if (door.IsOpen == true)
+            {
+                //    //WinPanel.active = true;
 
-            //WinPanel.active = true;
+                StartCoroutine(Wait(true));
 
-            StartCoroutine(Wait(true));
-            
-           
         }
+
+
+
+
+    }
 
        
      

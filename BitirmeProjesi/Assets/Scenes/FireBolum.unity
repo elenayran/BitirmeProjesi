@@ -4080,6 +4080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsOpen: 0
   animator: {fileID: 323589707}
+  doorMusic: {fileID: 8300000, guid: a0aa282dcc625f64996b1fac41ce8c1e, type: 3}
 --- !u!212 &323589709
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -30452,7 +30453,7 @@ EdgeCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

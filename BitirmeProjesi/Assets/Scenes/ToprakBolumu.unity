@@ -1535,6 +1535,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IsOpen: 0
   animator: {fileID: 210608918}
+  doorMusic: {fileID: 8300000, guid: a0aa282dcc625f64996b1fac41ce8c1e, type: 3}
 --- !u!95 &210608918
 Animator:
   serializedVersion: 3
@@ -2407,6 +2408,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &312187313 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 115498095428220183, guid: 1f577cec62044084381c76bfd79db712,
+    type: 3}
+  m_PrefabInstance: {fileID: 2844818256606492686}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &312187314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312187313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &312187315
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 312187313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &313892605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8717,6 +8748,24 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1550017102}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1436043573 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5385614902876933457, guid: a97645a66ffcf154ea00390172d8f574,
+    type: 3}
+  m_PrefabInstance: {fileID: 504290034843471317}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1436043574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1436043573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1467610693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13335,7 +13384,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -13350,7 +13399,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: ClosePanel
+      value: QuitGame
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}

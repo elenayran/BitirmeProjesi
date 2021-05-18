@@ -2,9 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
+    private Button exit;
+
+
+    private void Start()
+    {
+        exit = GetComponent<Button>();
+        exit.onClick.AddListener(QuitGame);
+    }
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -14,8 +23,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void ClosePanel(string parentName)
+    public void QuitGame()
     {
-        GameObject.Find(parentName).SetActive(false);
+        Application.Quit();
     }
 }

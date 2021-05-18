@@ -7,7 +7,7 @@ public class Door : MonoBehaviour
     public bool IsOpen;
     public Animator animator;
 
-    [SerializeField] GameObject doorMusic;
+    [SerializeField] AudioClip doorMusic;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,7 +28,7 @@ public class Door : MonoBehaviour
 
             animator.SetTrigger("DoorOpen");
 
-            //GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(doorMusic);
+            GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(doorMusic);
         }
     }
 }
