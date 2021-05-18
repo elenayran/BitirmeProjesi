@@ -1275,7 +1275,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: WinPanel
+      value: ' WinPanel'
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -2306,7 +2306,7 @@ GameObject:
   - component: {fileID: 334110335}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2338,7 +2338,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.8410659}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -2349,7 +2349,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.8736019}
   m_EdgeRadius: 0
 --- !u!212 &334110334
 SpriteRenderer:
@@ -3660,7 +3660,7 @@ GameObject:
   - component: {fileID: 606394598}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3692,7 +3692,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.7755126}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -3703,7 +3703,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.7424948}
   m_EdgeRadius: 0
 --- !u!212 &606394597
 SpriteRenderer:
@@ -3893,7 +3893,7 @@ PrefabInstance:
     - target: {fileID: 905655948872038059, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LosePanel
+      value: 'LosePanel '
       objectReference: {fileID: 0}
     - target: {fileID: 905655948872038059, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
@@ -4053,7 +4053,7 @@ GameObject:
   - component: {fileID: 631345025}
   m_Layer: 0
   m_Name: explosion_1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4152,7 +4152,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -6612,7 +6612,7 @@ GameObject:
   - component: {fileID: 1142750144}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6644,7 +6644,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.6444057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -6655,7 +6655,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.4802811}
   m_EdgeRadius: 0
 --- !u!212 &1142750143
 SpriteRenderer:
@@ -7177,8 +7177,13 @@ PrefabInstance:
     - target: {fileID: 7376045413100722150, guid: 704e28444c189444980bf54de5f4bcb1,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704e28444c189444980bf54de5f4bcb1, type: 3}
 --- !u!1 &1178636420
@@ -7503,7 +7508,7 @@ GameObject:
   - component: {fileID: 1227830951}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7535,7 +7540,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.7099594}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -7546,7 +7551,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.6113875}
   m_EdgeRadius: 0
 --- !u!212 &1227830950
 SpriteRenderer:
@@ -9463,7 +9468,7 @@ GameObject:
   - component: {fileID: 1454094297}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9495,7 +9500,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.6444057}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -9506,7 +9511,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.4802811}
   m_EdgeRadius: 0
 --- !u!212 &1454094296
 SpriteRenderer:
@@ -10135,7 +10140,7 @@ GameObject:
   - component: {fileID: 1532396170}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10315,7 +10320,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.5788523}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -10326,7 +10331,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.3491743}
   m_EdgeRadius: 0
 --- !u!1 &1545109916
 GameObject:
@@ -12479,6 +12484,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704e28444c189444980bf54de5f4bcb1, type: 3}
 --- !u!1 &1943569360
@@ -12889,6 +12899,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704e28444c189444980bf54de5f4bcb1, type: 3}
 --- !u!1 &2074686493
@@ -12905,7 +12920,7 @@ GameObject:
   - component: {fileID: 2074686497}
   m_Layer: 0
   m_Name: 1
-  m_TagString: Traps
+  m_TagString: DieTraps
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12937,7 +12952,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 3.152133}
+  m_Offset: {x: 0, y: 1.7755128}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -12948,7 +12963,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 19.2, y: 4.495735}
+  m_Size: {x: 19.2, y: 1.7424943}
   m_EdgeRadius: 0
 --- !u!212 &2074686496
 SpriteRenderer:

@@ -6,14 +6,7 @@ using UnityEngine.UI;
 
 public class LevelManager : MonoBehaviour
 {
-    private Button exit;
-
-
-    private void Start()
-    {
-        exit = GetComponent<Button>();
-        exit.onClick.AddListener(QuitGame);
-    }
+    
     public void NextLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
@@ -23,8 +16,8 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public void QuitGame()
+    public void ClosePanel(string parentName)
     {
-        Application.Quit();
+      GameObject.Find(parentName).SetActive(false);
     }
 }

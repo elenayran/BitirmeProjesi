@@ -2408,36 +2408,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &312187313 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 115498095428220183, guid: 1f577cec62044084381c76bfd79db712,
-    type: 3}
-  m_PrefabInstance: {fileID: 2844818256606492686}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &312187314
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &312187315
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 312187313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &313892605
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2525,6 +2495,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!1 &318572357
@@ -4045,6 +4020,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!4 &568701436 stripped
@@ -5365,6 +5345,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!1 &910393489
@@ -6506,8 +6491,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1089866207}
   m_LocalRotation: {x: -0.062190752, y: 0.09009338, z: 0.36421904, w: 0.9248568}
-  m_LocalPosition: {x: -0.821, y: -0.4, z: 1.04}
-  m_LocalScale: {x: 0.5565958, y: 0.107049994, z: 0.5079687}
+  m_LocalPosition: {x: -0.7855, y: -0.35491, z: 0.7802}
+  m_LocalScale: {x: 0.5047155, y: 0.107049994, z: 0.5079687}
   m_Children: []
   m_Father: {fileID: 1112059142}
   m_RootOrder: 0
@@ -7963,6 +7948,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!4 &1248061563 stripped
@@ -8734,6 +8724,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!4 &1424966826 stripped
@@ -8748,24 +8743,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1550017102}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1436043573 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5385614902876933457, guid: a97645a66ffcf154ea00390172d8f574,
-    type: 3}
-  m_PrefabInstance: {fileID: 504290034843471317}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1436043574
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436043573}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58325f5baba3b1247a78409f2f091308, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1467610693
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11491,6 +11468,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704e28444c189444980bf54de5f4bcb1, type: 3}
 --- !u!1001 &1879498338
@@ -11580,6 +11562,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!1 &1887769696
@@ -13182,6 +13169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}
 --- !u!4 &2128402930 stripped
@@ -13384,7 +13376,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -13399,7 +13391,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: QuitGame
+      value: ClosePanel
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -13409,7 +13401,7 @@ PrefabInstance:
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Winpanel
+      value: ' WinPanel'
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -13601,7 +13593,7 @@ PrefabInstance:
     - target: {fileID: 905655948872038059, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: LosePanel
+      value: 'LosePanel '
       objectReference: {fileID: 0}
     - target: {fileID: 905655948872038059, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
@@ -14207,6 +14199,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 704e28444c189444980bf54de5f4bcb1, type: 3}
 --- !u!1001 &7397761398512226208
@@ -14508,5 +14505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: monster
       objectReference: {fileID: 0}
+    - target: {fileID: 8128525735975263158, guid: 285851b2419912b4fa553d208c683dc3,
+        type: 3}
+      propertyPath: diemonstermusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 285851b2419912b4fa553d208c683dc3, type: 3}

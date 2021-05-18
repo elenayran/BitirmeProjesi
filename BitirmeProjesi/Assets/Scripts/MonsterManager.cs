@@ -11,6 +11,9 @@ public class MonsterManager : MonoBehaviour
     public int maxHealth=100;
     int currentHealth;
     public bool isAlive;
+
+    [SerializeField] AudioClip diemonstermusic;
+
     
     // Start is called before the first frame update
     void Start()
@@ -46,7 +49,8 @@ public class MonsterManager : MonoBehaviour
         GetComponent<Collider2D>().enabled = false;
         this.enabled = false;
         myBody.constraints = RigidbodyConstraints2D.FreezePosition;
-        
+
+        GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(diemonstermusic);
 
     }
 

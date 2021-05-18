@@ -45,12 +45,13 @@ public class PlayerManager : MonoBehaviour
 
     }
 
-    void PlayerDie()
+   public void PlayerDie()
     {
-        
-        isAlive = false;
-        Debug.Log("playar öldü");
         animator.SetTrigger("Die");
+        isAlive = false;
+       
+        Debug.Log("playar öldü");
+        
 
 
         GetComponent<Collider2D>().enabled = false;

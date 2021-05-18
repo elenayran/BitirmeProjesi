@@ -150,6 +150,16 @@ public class PlayerControllers : MonoBehaviour
 
         }
 
+        else if (collision.tag =="DieTraps")
+        {
+            playerManager.animator.SetTrigger("Die");
+            playerManager.PlayerDie();
+
+
+          
+
+        }
+
         else if (collision.tag=="Door")
         {
             if (door.IsOpen == true)

@@ -11,6 +11,7 @@ TagManager:
   - Traps
   - TrapsGround
   - Door
+  - DieTraps
   layers:
   - Default
   - TransparentFX
