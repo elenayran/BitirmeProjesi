@@ -26,6 +26,8 @@ public class PlayerControllers : MonoBehaviour
     public float attackRate = 2f;
     float nextAttactTime= 0f;
 
+    [SerializeField] AudioClip jumpMusic;
+
     [SerializeField] public GameObject WinPanel;
     public Door door;
    
@@ -77,12 +79,14 @@ public class PlayerControllers : MonoBehaviour
                 myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                 canDoubleJump = true;
                 myAnimator.SetTrigger("Jump");
+                GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(jumpMusic);
                 
             }
             else
             {
                 if (canDoubleJump == true)
                 {
+                    GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(jumpMusic);
                     myBody.velocity = new Vector2(myBody.velocity.x, jumpPower);
                     canDoubleJump = false;
                    

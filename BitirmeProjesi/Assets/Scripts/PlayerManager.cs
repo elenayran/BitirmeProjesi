@@ -14,7 +14,9 @@ public class PlayerManager : MonoBehaviour
     [SerializeField] public GameObject  LosePanel;
 
     public PlayerControllers playerControllers;
-  
+
+    [SerializeField] AudioClip dieMusic;
+   
 
 
     // Start is called before the first frame update
@@ -45,12 +47,17 @@ public class PlayerManager : MonoBehaviour
 
     void PlayerDie()
     {
+        
         isAlive = false;
         Debug.Log("playar öldü");
         animator.SetTrigger("Die");
 
+
         GetComponent<Collider2D>().enabled = false;
         myBody.constraints = RigidbodyConstraints2D.FreezePosition;
+
+        GameObject.Find("Sound Controller").GetComponent<AudioSource>().clip = null;
+        GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(dieMusic);
 
 
 
