@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
     public int playerMaxHealth=100;
-    int playerCurrentHealth;
+    public int playerCurrentHealth;
     private Rigidbody2D myBody;
     
     public Animator animator;
