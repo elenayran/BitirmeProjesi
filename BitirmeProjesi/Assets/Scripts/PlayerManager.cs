@@ -16,12 +16,13 @@ public class PlayerManager : MonoBehaviour
     public PlayerControllers playerControllers;
 
     [SerializeField] AudioClip dieMusic;
-   
 
+    private Health _health;
 
     // Start is called before the first frame update
     void Start()
     {
+        _health = GetComponent<Health>();
         playerCurrentHealth = playerMaxHealth;
         myBody = GetComponent<Rigidbody2D>();
         isAlive = true;
@@ -30,8 +31,13 @@ public class PlayerManager : MonoBehaviour
 
     public void PlayerTakeDamage(int playerDamage)
     {
+        Debug.Log("Helehelee");
         playerCurrentHealth -= playerDamage;
-
+        for (int i = 0; i < playerDamage / 20; i++)
+        {
+            _health.health -= 1;
+        }
+        
         animator.SetTrigger("Hurt");
 
         if (playerCurrentHealth <= 0)

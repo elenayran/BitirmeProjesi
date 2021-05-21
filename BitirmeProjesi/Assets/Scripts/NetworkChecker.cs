@@ -9,6 +9,11 @@ public class NetworkChecker : MonoBehaviour
     public GameObject alert;
     private void Awake()
     {
+        InvokeRepeating("CheckNetworkControll", 1, 1);
+    }
+
+    private void CheckNetworkControll()
+    {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
             Debug.Log("No Internet");
@@ -21,20 +26,10 @@ public class NetworkChecker : MonoBehaviour
         else
         {
             Debug.Log("Internet is Good");
-            alert.SetActive(true);
-            textResult.text = "You are Connected and online";
+            //alert.SetActive(true);
+            //textResult.text = "You are Connected and online";
 
         }
-
-
-
-
-
-
     }
-
-
-
-
 
 }

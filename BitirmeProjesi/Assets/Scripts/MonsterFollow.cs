@@ -31,11 +31,14 @@ public class MonsterFollow : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+    float _attackCoolDown = 2f;
     // Update is called once per frame
     void Update()
     {
         if (MonsterManager.isAlive)
         {
+            _attackCoolDown += Time.deltaTime;
+
             monsterAnimator.SetFloat("SpeedMonster", Mathf.Abs(monterSpeed));
             //Monster öldüyse karakteri takip etme.
 
@@ -54,10 +57,10 @@ public class MonsterFollow : MonoBehaviour
                 }
 
             }
-            if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10)
+            if (Vector2.Distance(transform.position, playerControllers.transform.position) < 10 && _attackCoolDown >= 2f)
             {
                 Attack();
-
+                _attackCoolDown = 0;
             }
         }
 

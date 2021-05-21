@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/ToprakBolumu.unity
+    guid: de45690af8cc940408b152c09cb659af
+  - enabled: 1
+    path: Assets/Scenes/SuluBolum.unity
+    guid: 287db07c8c34d9f4f9888097e1bc674a
+  - enabled: 1
+    path: Assets/Scenes/FireBolum.unity
+    guid: 5527297546c55fe4b8e690cb4823ebf3
+  - enabled: 1
+    path: Assets/Scenes/airbolum.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
   m_configObjects: {}
