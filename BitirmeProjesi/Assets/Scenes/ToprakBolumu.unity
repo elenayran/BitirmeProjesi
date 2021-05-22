@@ -13707,6 +13707,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: ' WinPanel'
       objectReference: {fileID: 0}
+    - target: {fileID: 504290033530607722, guid: a97645a66ffcf154ea00390172d8f574,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size

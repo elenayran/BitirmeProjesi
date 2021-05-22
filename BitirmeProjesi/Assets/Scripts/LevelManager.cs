@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     
     public void NextLevel()
     {
+        Debug.Log("týýklandý");
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
     public void Restart()

@@ -27,7 +27,7 @@ public class Door : MonoBehaviour
             Debug.Log("Kapı açık ve karakter içinden geçebilir.");
 
             animator.SetTrigger("DoorOpen");
-
+            GameObject.Find("Sound Controller").GetComponent<AudioSource>().clip = null;
             GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(doorMusic);
         }
     }

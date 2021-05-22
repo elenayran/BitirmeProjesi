@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: "Assets/Scenes/Giri\u015F.unity"
+    guid: e497d1159173b7c4cab11cff02dd73f2
+  - enabled: 1
     path: Assets/Scenes/ToprakBolumu.unity
     guid: de45690af8cc940408b152c09cb659af
   - enabled: 1
