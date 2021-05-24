@@ -31,7 +31,7 @@ public class PlayerManager : MonoBehaviour
 
     public void PlayerTakeDamage(int playerDamage)
     {
-        Debug.Log("Helehelee");
+        
         playerCurrentHealth -= playerDamage;
         for (int i = 0; i < playerDamage / 20; i++)
         {

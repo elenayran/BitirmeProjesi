@@ -14,6 +14,8 @@ public class MonsterManager : MonoBehaviour
 
     [SerializeField] AudioClip diemonstermusic;
 
+    public float inverval;
+
     
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,9 @@ public class MonsterManager : MonoBehaviour
 
         GameObject.Find("Sound Controller").GetComponent<AudioSource>().PlayOneShot(diemonstermusic);
 
+
+        Destroy(gameObject, inverval);
+    
     }
 
 

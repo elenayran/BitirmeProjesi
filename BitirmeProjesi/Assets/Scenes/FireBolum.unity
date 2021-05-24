@@ -5178,6 +5178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
         type: 3}
+      propertyPath: inverval
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
       propertyPath: diemonstermusic
       value: 
       objectReference: {fileID: 8300000, guid: 4c5937978cb67c64baff3abaf4c9502a, type: 3}
@@ -32428,6 +32433,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SortingOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
+        type: 3}
+      propertyPath: inverval
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7376045413100722159, guid: 704e28444c189444980bf54de5f4bcb1,
         type: 3}
