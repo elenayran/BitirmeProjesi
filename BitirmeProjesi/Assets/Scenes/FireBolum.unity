@@ -6865,7 +6865,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 6
-  jumpPower: 4
+  jumpPower: 4.53
   onGround: 0
   distance: 5
   WhatIsLadder:

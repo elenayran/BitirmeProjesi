@@ -7354,7 +7354,7 @@ PrefabInstance:
     - target: {fileID: 7376045413100722144, guid: 704e28444c189444980bf54de5f4bcb1,
         type: 3}
       propertyPath: monster2AttackRange
-      value: 0.7
+      value: 0.62
       objectReference: {fileID: 0}
     - target: {fileID: 7376045413100722145, guid: 704e28444c189444980bf54de5f4bcb1,
         type: 3}
