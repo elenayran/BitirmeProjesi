@@ -9433,7 +9433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textResult: {fileID: 888449565}
-  alert: {fileID: 162767387}
+  Alert: {fileID: 162767387}
 --- !u!1 &1382530261
 GameObject:
   m_ObjectHideFlags: 0

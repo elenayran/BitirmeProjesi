@@ -9062,6 +9062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Alert
       objectReference: {fileID: 0}
+    - target: {fileID: 6020232409671187563, guid: c0de9e2c5c389a242afbe687d8b24916,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0de9e2c5c389a242afbe687d8b24916, type: 3}
 --- !u!1 &707164755
@@ -31662,7 +31667,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textResult: {fileID: 358630569}
-  alert: {fileID: 1975278875}
+  Alert: {fileID: 1975278875}
 --- !u!1 &2008520481
 GameObject:
   m_ObjectHideFlags: 0
