@@ -37,7 +37,7 @@ public class NetworkChecker : MonoBehaviour
         if (net == true)
         {
             Alert.SetActive(true);
-            Debug.Log("No Internet");
+          
 
             textResult.text = "Sorry, you do not have connection. Please check your Internet.";
 
