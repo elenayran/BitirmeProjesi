@@ -6,7 +6,9 @@ using UnityEngine.UI;
 public class NetworkChecker : MonoBehaviour
 {
     public Text textResult;
-    public GameObject alert;
+    [SerializeField] public GameObject Alert
+        ;
+
     private void Awake()
     {
         InvokeRepeating("CheckNetworkControll", 1, 1);
@@ -16,11 +18,8 @@ public class NetworkChecker : MonoBehaviour
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
-            Debug.Log("No Internet");
-            alert.SetActive(true);
-            textResult.text = "Sorry, you do not have connection. Please check your Internet.";
-
-            Application.Quit();
+            StartCoroutine(WaitNet(true));
+            
 
         }
         else
@@ -30,6 +29,21 @@ public class NetworkChecker : MonoBehaviour
             //textResult.text = "You are Connected and online";
 
         }
+    }
+
+    public IEnumerator WaitNet(bool net)
+    {
+        yield return new WaitForSecondsRealtime(1f);
+        if (net == true)
+        {
+            Alert.SetActive(true);
+            Debug.Log("No Internet");
+
+            textResult.text = "Sorry, you do not have connection. Please check your Internet.";
+
+            Application.Quit();
+        }
+
     }
 
 }
