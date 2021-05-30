@@ -9676,7 +9676,7 @@ PrefabInstance:
     - target: {fileID: 2844818255975700912, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: -97.989
+      value: -140.69
       objectReference: {fileID: 0}
     - target: {fileID: 2844818255975700912, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
@@ -9721,7 +9721,7 @@ PrefabInstance:
     - target: {fileID: 2844818255975700912, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10.991028
+      value: -32.342
       objectReference: {fileID: 0}
     - target: {fileID: 2844818255975700912, guid: 1f577cec62044084381c76bfd79db712,
         type: 3}
@@ -9742,6 +9742,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: 'LosePanel '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2844818255975700915, guid: 1f577cec62044084381c76bfd79db712,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f577cec62044084381c76bfd79db712, type: 3}
@@ -14626,12 +14631,12 @@ PrefabInstance:
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 894.538
+      value: 1714.6
       objectReference: {fileID: 0}
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 386.2146
+      value: 917.0283
       objectReference: {fileID: 0}
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -14671,12 +14676,12 @@ PrefabInstance:
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 20.0181
+      value: -0.0049438
       objectReference: {fileID: 0}
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -10.9909
+      value: -21.202114
       objectReference: {fileID: 0}
     - target: {fileID: 504290033530607637, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
@@ -14697,6 +14702,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: WinPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 504290033530607722, guid: a97645a66ffcf154ea00390172d8f574,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6199984327540085196, guid: a97645a66ffcf154ea00390172d8f574,
         type: 3}
