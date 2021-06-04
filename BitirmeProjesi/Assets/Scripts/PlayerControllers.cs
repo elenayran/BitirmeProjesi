@@ -72,7 +72,7 @@ public class PlayerControllers : MonoBehaviour
         Debug.Log("onGround: " + onGround);
 
         #region playerın zıplamasının kontrol edilmesi
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             if (onGround == true)
             {                
@@ -101,7 +101,7 @@ public class PlayerControllers : MonoBehaviour
 
         if (Time.time>=nextAttactTime)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.Q))
             {
                 Attack();
                 nextAttactTime = Time.time + 1f / attackRange;
