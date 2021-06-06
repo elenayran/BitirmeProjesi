@@ -9,13 +9,13 @@ public class NetworkChecker : MonoBehaviour
     [SerializeField] public GameObject Alert
         ;
 
-    private void Awake()
+    public void Awake()
     {
         InvokeRepeating("CheckNetworkControll", 1, 1);
         CheckNetworkControll();
     }
 
-    private void CheckNetworkControll()
+    public void CheckNetworkControll()
     {
         if (Application.internetReachability == NetworkReachability.NotReachable)
         {
