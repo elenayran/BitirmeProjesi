@@ -12,7 +12,7 @@ public class NetworkChecker : MonoBehaviour
     public void Awake()
     {
         InvokeRepeating("CheckNetworkControll", 1, 1);
-        CheckNetworkControll();
+      
     }
 
     public void CheckNetworkControll()
