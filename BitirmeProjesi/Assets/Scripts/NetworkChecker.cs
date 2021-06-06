@@ -12,6 +12,7 @@ public class NetworkChecker : MonoBehaviour
     private void Awake()
     {
         InvokeRepeating("CheckNetworkControll", 1, 1);
+        CheckNetworkControll();
     }
 
     private void CheckNetworkControll()
