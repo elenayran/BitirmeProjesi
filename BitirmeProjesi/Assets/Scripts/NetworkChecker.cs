@@ -6,43 +6,37 @@ using UnityEngine.UI;
 public class NetworkChecker : MonoBehaviour
 {
     public Text textResult;
-    [SerializeField] public GameObject Alert
-        ;
+    [SerializeField] public GameObject Alert;
 
     public void Awake()
     {
-        InvokeRepeating("CheckNetworkControll", 1, 1);
-      
+        InvokeRepeating("CheckNetworkControll", 1, 10);
     }
 
     public void CheckNetworkControll()
     {
-        if (Application.internetReachability == NetworkReachability.NotReachable)
-        {
-            StartCoroutine(WaitNet(true));
-            
-
-        }
-        else
-        {
-            Debug.Log("Internet is Good");
-            //alert.SetActive(true);
-            //textResult.text = "You are Connected and online";
-
-        }
+        StartCoroutine(WaitNet(true));
     }
 
     public IEnumerator WaitNet(bool net)
     {
-        yield return new WaitForSecondsRealtime(1f);
+
+        WWW www = new WWW("http://www.google.com.");
+        yield return www;
         if (net == true)
         {
-            Alert.SetActive(true);
-          
-
-            textResult.text = "Sorry, you do not have connection. Please check your Internet.";
-
-            Application.Quit();
+            if (www.error != null)
+            {
+                Alert.SetActive(true);
+                textResult.text = "Sorry, you do not have connection. Please check your Internet.";
+                yield return new WaitForSeconds(1f);
+                Application.Quit();
+            }
+            else
+            {
+                Debug.Log("Internet baðlantýn var!");
+            }
+            
         }
 
     }
